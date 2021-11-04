@@ -71,7 +71,7 @@ fig, ax = plt.subplots()
 forces = [0.217, 0.175,0.259,0.284,0.259,0.350,0.400,0.400,0.539,0.509,0.617,0.692,0.761,0.784,0.884,0.802,0.809,0.975]
 a, b = best_fit(ss, forces)
 
-iw1s = [(a+b*(angle*r1))*(angle*r1) for angle in ir1s]
+iw1s = [0.5*(a+b*(angle*r1))*(angle*r1) for angle in ir1s]
 for i,w in enumerate(iw1s):
     table[i].append('{:.3f}'.format(w)+' N')
 
